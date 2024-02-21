@@ -16,3 +16,13 @@ dependencyResolutionManagement {
 
 rootProject.name = "fakegps"
 include(":app")
+
+include(
+    ":core:data",
+    ":core:domain",
+    ":core:model"
+)
+
+include(
+    ":feature:onboarding"
+)

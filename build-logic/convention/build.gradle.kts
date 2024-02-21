@@ -22,9 +22,9 @@ gradlePlugin {
             id = "com.citytexi.fakegps.application"
             implementationClass = "com.citytexi.fakegps.plugin.AndroidApplicationPlugin"
         }
-        create("android-feature") {
-            id = "com.citytexi.fakegps.feature"
-            implementationClass = "com.citytexi.fakegps.plugin.AndroidFeaturePlugin"
+        create("android-library") {
+            id = "com.citytexi.fakegps.library"
+            implementationClass = "com.citytexi.fakegps.plugin.AndroidLibraryPlugin"
         }
         create("android-kotlin") {
             id = "com.citytexi.fakegps.kotlin"
