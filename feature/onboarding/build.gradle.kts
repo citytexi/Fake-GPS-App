@@ -6,3 +6,7 @@ plugins {
 android {
     namespace = "com.citytexi.fakegps.feature.onboarding"
 }
+
+dependencies {
+    implementation(project(":core:design"))
+}

@@ -19,6 +19,7 @@ class AndroidHiltPlugin : Plugin<Project> {
             "ksp"(libs.findLibrary("hilt.compiler").get())
             "testImplementation"(libs.findLibrary("hilt.testing").get())
             "kspTest"(libs.findLibrary("hilt.testing.compiler").get())
+            "implementation"(libs.findLibrary("hilt-navigation-compose").get())
         }
     }
 }

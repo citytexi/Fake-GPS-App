@@ -18,11 +18,13 @@ rootProject.name = "fakegps"
 include(":app")
 
 include(
+    ":core:analytics",
     ":core:data",
+    ":core:design",
     ":core:domain",
-    ":core:model"
+    ":core:model",
 )
 
 include(
-    ":feature:onboarding"
+    ":feature:onboarding",
 )
