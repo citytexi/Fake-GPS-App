@@ -11,5 +11,5 @@ internal fun OnBoardingRoute(
     navigateToHome: (NavOptions) -> Unit,
     viewModel: OnBoardingViewModel = hiltViewModel(),
 ) {
-    OnBoardingScreen()
+    OnBoardingScreen {}
 }

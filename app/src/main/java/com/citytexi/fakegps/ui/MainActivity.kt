@@ -1,5 +1,7 @@
 package com.citytexi.fakegps.ui
 
+import android.Manifest
+import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.SystemBarStyle
@@ -59,6 +61,8 @@ class MainActivity : ComponentActivity() {
             }
         }
 
+        checkPermissions()
+
         setContent {
             val darkTheme = shouldUseDarkTheme(uiState)
 
@@ -90,6 +94,30 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    /**
+     * if Permissions denied, call a function of [requestPermissions].
+     */
+    private fun checkPermissions() {
+        val permissions = mutableListOf<String>()
+
+        when (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION)) {
+            PackageManager.PERMISSION_GRANTED -> Unit
+            else -> permissions.add(Manifest.permission.ACCESS_FINE_LOCATION)
+        }
+        when (checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION)) {
+            PackageManager.PERMISSION_GRANTED -> Unit
+            else -> permissions.add(Manifest.permission.ACCESS_COARSE_LOCATION)
+        }
+
+        if (permissions.isNotEmpty()) {
+            requestPermissions(permissions.toTypedArray(), PERMISSION_REQUEST_CODE)
+        }
+    }
+
+    companion object {
+        private const val PERMISSION_REQUEST_CODE = 1557
     }
 }
 

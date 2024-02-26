@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="on_boarding_title">With this app, you can set your location to any place you want, regardless of your actual location.</string>
+    <string name="on_boarding_start_button_message">Start</string>
+</resources>
